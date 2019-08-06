@@ -29,10 +29,11 @@ export default class NavigationDrawer extends Component {
   render() {
     return (
       <div className="drawer">
+        <div class="drawer-inner">
         <UserProfile data={this.props.userdata} />
         <div className="drawer-list">
 
-          <Link to='/dashboard' style={{ textDecoration: 'none' }}>
+          <Link to='/dashboard' >
             <div className="font-clr-white listitem" onClick={() => this.updateActiveMenu("dashboard")}>
               <i className="material-icons list-icon-padding">
                 dashboard
@@ -44,7 +45,7 @@ export default class NavigationDrawer extends Component {
             </div>
           </Link>
 
-          <Link to='/apps' style={{ textDecoration: 'none' }}>
+          <Link to='/apps' >
             <div className="font-clr-white listitem" onClick={() => this.updateActiveMenu("apps")}>
               <i className="material-icons list-icon-padding">
                 apps
@@ -90,7 +91,7 @@ export default class NavigationDrawer extends Component {
                   this.props.subcomponent.map((item, index) => {
                     return (
                       <div>
-                        <Link to={'/components/' + index} style={{ textDecoration: 'none' }}>
+                        <Link to={'/components/' + index} >
                           <div key={index} className="list-subitem font-clr-white">{item.title}</div>
                         </Link>
                       </div>
@@ -102,7 +103,7 @@ export default class NavigationDrawer extends Component {
           }
 
 
-          {/* <Link to='/pages' style={{ textDecoration: 'none' }}> */}
+          {/* <Link to='/pages' > */}
           <div className="font-clr-white listitem" onClick={() => this.updateActiveMenu("pages")}>
             <i className="material-icons list-icon-padding">
               pages
@@ -128,7 +129,7 @@ export default class NavigationDrawer extends Component {
                   this.props.subpage.map((item, index) => {
                     return (
                       <div key={index}>
-                        <Link to={'/pages/' + index} style={{ textDecoration: 'none' }}>
+                        <Link to={'/pages/' + index} >
                           <div key={index} className="list-subitem font-clr-white">{item.title}</div>
                         </Link>
                       </div>
@@ -139,7 +140,7 @@ export default class NavigationDrawer extends Component {
               : null
           }
 
-          {/* <Link to='/forms' style={{ textDecoration: 'none' }}> */}
+          {/* <Link to='/forms' > */}
           <div className="font-clr-white listitem" onClick={() => this.updateActiveMenu("forms")}>
             <i className="material-icons list-icon-padding">
               file_copy
@@ -165,7 +166,7 @@ export default class NavigationDrawer extends Component {
                   this.props.subform.map((item, index) => {
                     return (
                       <div key={index}>
-                        <Link to={'/forms/' + index} style={{ textDecoration: 'none' }}>
+                        <Link to={'/forms/' + index} >
                           <div key={index} className="list-subitem font-clr-white">{item.title}</div>
                         </Link>
                       </div>
@@ -177,7 +178,7 @@ export default class NavigationDrawer extends Component {
               : null
           }
 
-          <Link to='/icons' style={{ textDecoration: 'none' }}>
+          <Link to='/icons' >
             <div className="font-clr-white listitem" onClick={() => this.updateActiveMenu("icons")}>
               <i className="material-icons list-icon-padding">
                 wb_sunny
@@ -189,7 +190,7 @@ export default class NavigationDrawer extends Component {
             </div>
           </Link>
 
-          <Link to='/table' style={{ textDecoration: 'none' }}>
+          <Link to='/table' >
             <div className="font-clr-white listitem" onClick={() => this.updateActiveMenu("table")}>
               <i className="material-icons list-icon-padding">
                 wb_sunny
@@ -201,7 +202,7 @@ export default class NavigationDrawer extends Component {
             </div>
           </Link>
 
-          <Link to='/location' style={{ textDecoration: 'none' }}>
+          <Link to='/location' >
             <div className="font-clr-white listitem" onClick={() => this.updateActiveMenu("location")}>
               <i className="material-icons list-icon-padding">
                 place
@@ -213,7 +214,7 @@ export default class NavigationDrawer extends Component {
             </div>
           </Link>
 
-          <Link to='/mobileview' style={{ textDecoration: 'none' }}>
+          <Link to='/mobileview' >
             <div className="font-clr-white listitem" onClick={() => this.updateActiveMenu("mobileview")}>
               <i className="material-icons list-icon-padding">
                 adb
@@ -224,7 +225,7 @@ export default class NavigationDrawer extends Component {
             </i>
             </div>
           </Link>
-
+        </div>
         </div>
       </div >
     )

@@ -26,11 +26,6 @@
   margin-right: 234px;
 }
 
-.layout-container-wrapper{
-  padding: 40px 18px 44px 23px;
-  width: 86% !important;
-}
-
 .dropdown-btn-content{
   background-color: #101420;
   display: flex;
@@ -38,7 +33,7 @@
 }
 
 .square_rounded_button_group_wrapper{
-  background-color: #101420; 
+  background-color: #101420;
 }
 
 .button-style{

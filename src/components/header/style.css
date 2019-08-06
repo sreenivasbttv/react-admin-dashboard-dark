@@ -11,6 +11,7 @@
   position: fixed;
   right: 0;
   left: 0;
+  height: 80px;
 }
 
 .search-icon{
@@ -43,7 +44,7 @@
   color: gray;
   border: 0;
   font-size: 12px;
-  background-color:#0E1322; 
+  background-color:#0E1322;
 }
 
 .margin{
@@ -68,7 +69,7 @@
 }
 
 .menuItem{
-  background-color:#0E1322; 
+  background-color:#0E1322;
 }
 
 .color-white{

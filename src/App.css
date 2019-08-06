@@ -1,12 +1,19 @@
 .content-wrapper{
-  display: flex; 
+  display: flex;
   background-color: #262D40;
-  padding-top:30px;
+  margin-top:80px;
+  margin-left: 18%;
 }
 .App{
   width: 100%;
   /* display: flex;
   flex-direction: row; */
+}
+
+.inner-content-wrapper {
+  width: 100%;
+  overflow: hidden;
+  margin: 25px 45px;
 }
 
 .content-navigation-wrapper{

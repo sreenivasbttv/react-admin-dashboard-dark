@@ -150,15 +150,17 @@ export default class App extends Component {
           {
             this.state.isClicked === true ? <button className="logout-btn">Logout</button> : null
           }
+
+          <NavigationDrawer
+            userdata={this.state.userProfile}
+            active_menu_item={this.state.active_menu_item}
+            updateActiveMenu={this.updateActiveMenu}
+            subform={this.state.form_submenu}
+            subpage={this.state.pages_submenu}
+            subcomponent={this.state.components_submenu}
+          />
           <div className="content-wrapper">
-            <NavigationDrawer
-              userdata={this.state.userProfile}
-              active_menu_item={this.state.active_menu_item}
-              updateActiveMenu={this.updateActiveMenu}
-              subform={this.state.form_submenu}
-              subpage={this.state.pages_submenu}
-              subcomponent={this.state.components_submenu}
-            />
+            <div className="inner-content-wrapper">
 
             <Switch>
 
@@ -203,6 +205,7 @@ export default class App extends Component {
               />
 
             </Switch>
+            </div>
 
           </div>
         </Router>

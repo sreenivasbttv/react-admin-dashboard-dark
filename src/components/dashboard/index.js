@@ -166,7 +166,7 @@ export default class Dashboard extends Component {
   }
   render() {
     return (
-      <div className="content main-content-wrapper ">
+      <div className="dashboard-wrapper">
         <div className="dashboard-header"><span>Dashboard</span></div>
         <LineGraph chartRef={this.chartRef} chart_title={this.state.chart_name} />
         <div className="visitor-info">
