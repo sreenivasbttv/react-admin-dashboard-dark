@@ -151,7 +151,6 @@ export default class ButtonLayoutContainer extends Component {
 
   handelClick = event => {
     this.setState({ anchorEl: event.currentTarget });
-    console.log("hello");
   };
 
   handleCloseMenu = () => {

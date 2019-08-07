@@ -4,7 +4,6 @@ import Header from './components/header';
 import './App.css';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Dashboard from './components/dashboard';
-import Form from './components/forms';
 import Apps from './components/apps';
 import Calender from './components/calender';
 import ButtonLayoutContainer from './components/buttonlayoutcontainer';
@@ -14,7 +13,7 @@ import FormLayout from './components/formlayout';
 import Table from './components/table';
 import CardLayoutContainer from './components/cardlayoutcontainer';
 
-export default class App extends Component {
+class App extends Component {
 
   constructor() {
     super();
@@ -214,7 +213,7 @@ export default class App extends Component {
   }
 }
 
-
+export default App;
 
 /* {
   this.state.form_types.map((item, id) => {

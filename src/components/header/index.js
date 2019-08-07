@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import './style.css';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
+import ThemeSwitch from '../themeSwitch';
+import Switch from '../switch';
+
 export default class Header extends Component {
   constructor(props) {
     super(props);
@@ -12,7 +15,6 @@ export default class Header extends Component {
 
   handelClick = event => {
     this.setState({ anchorEl: event.currentTarget });
-    console.log("helo");
   };
 
   handleCloseMenu = () => {
@@ -36,7 +38,12 @@ export default class Header extends Component {
             </div>
           </div>
           <div className="menu-content-wrapper">
-            <i className="material-icons size-30">
+
+            <Switch></Switch>
+            <Switch></Switch>
+            <ThemeSwitch></ThemeSwitch>
+
+          <i className="material-icons size-30">
               mail_outline
             </i>
             <i className="material-icons size-30">

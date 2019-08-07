@@ -9,19 +9,19 @@ export default class IconicForm extends Component {
         <div className="form-content">
           <div className="text-fileds iconic-text-fields">
             <input type="text" placeholder={this.props.iconic_form_data.username} className="text-input" onChange={this.getInput} />
-            <i class="material-icons username-icon-clr">
+            <i className="material-icons username-icon-clr">
               person_outline
             </i>
           </div>
           <div className="text-fileds iconic-text-fields">
             <input type="text" placeholder={this.props.iconic_form_data.useremail} className="text-input" />
-            <i class="material-icons username-icon-clr">
+            <i className="material-icons username-icon-clr">
               email
             </i>
           </div>
           <div className="text-fileds iconic-text-fields">
             <input type="text" placeholder={this.props.iconic_form_data.password} className="text-input" />
-            <i class="material-icons username-icon-clr">
+            <i className="material-icons username-icon-clr">
               https
             </i>
           </div>

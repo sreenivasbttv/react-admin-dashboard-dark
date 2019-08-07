@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import './style.css';
-import Card from '../cards';
 import ProfileCard from '../profilecard';
 import TodoCard from '../todocard';
 import StatisticsCard from '../statisticscard';

@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import './style.css';
 import UserProfile from '../userprofileblock';
-import { Link, BrowserRouter as Router, Route } from 'react-router-dom';
-import FormLayout from '../formlayout';
+import { Link } from 'react-router-dom';
 
 export default class NavigationDrawer extends Component {
   constructor() {
@@ -29,7 +28,7 @@ export default class NavigationDrawer extends Component {
   render() {
     return (
       <div className="drawer">
-        <div class="drawer-inner">
+        <div className="drawer-inner">
         <UserProfile data={this.props.userdata} />
         <div className="drawer-list">
 
@@ -64,11 +63,11 @@ export default class NavigationDrawer extends Component {
             <div className="list-item-width">Calender</div>
             {
               this.state.components_submenu ?
-                <i class="material-icons list-item-arrow">
+                <i className="material-icons list-item-arrow">
                   expand_more
                     </i>
                 :
-                <i class="material-icons list-item-arrow">
+                <i className="material-icons list-item-arrow">
                   chevron_right
                     </i>
             }

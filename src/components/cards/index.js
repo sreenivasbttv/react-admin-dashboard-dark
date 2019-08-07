@@ -25,7 +25,7 @@ export default class Cards extends Component {
 
             <div className="todo_card">
               <div className="todo_date clr_darkgray">
-                <i class="material-icons">
+                <i className="material-icons">
                   watch_later
                 </i>
                 {this.props.todo_card.date}

@@ -33,7 +33,7 @@ export default class TableContent extends Component {
     if (this.props.data.content.length < this.state.number)
       this.setState({ open: false });
   };
-  
+
   handleInput = async (e) => {
     let name = e.target.value;
     await
@@ -106,7 +106,6 @@ export default class TableContent extends Component {
         <div className="color-white entries">
           Showing 1-{this.props.data.content.length} of 50 entries
         </div>
-        {console.log("snackbar in render", this.state.open)}
         <Snackbar
           anchorOrigin={{
             vertical: 'top',

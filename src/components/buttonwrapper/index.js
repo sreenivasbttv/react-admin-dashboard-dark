@@ -62,7 +62,6 @@ export default class ButtonWrapper extends Component {
                   border: '1px solid transparent',
                   borderRadius: '3px'
                 };
-
                 switch (item.title) {
                   case 'XS': btnSizes = { ...commonStyles, padding: '7px 26px', marginRight: '197px' };
                     break;
@@ -72,8 +71,8 @@ export default class ButtonWrapper extends Component {
                     break;
                   case 'large': btnSizes = { ...commonStyles, padding: '11px 42px' };
                     break;
+                  default:  
                 }
-                console.log("clr", btnSizes);
                 return (
                   <Button
                     key={index}
