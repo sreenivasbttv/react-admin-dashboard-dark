@@ -12,6 +12,7 @@ import Icons from './components/icons';
 import FormLayout from './components/formlayout';
 import Table from './components/table';
 import CardLayoutContainer from './components/cardlayoutcontainer';
+import ThemeSwitch from './components/themeSwitch';
 
 class App extends Component {
 
@@ -208,6 +209,8 @@ class App extends Component {
 
           </div>
         </Router>
+
+        <ThemeSwitch />
       </div>
     )
   }

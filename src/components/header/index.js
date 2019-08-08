@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import './style.css';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
-import ThemeSwitch from '../themeSwitch';
-import Switch from '../switch';
+import Header2 from '../Header2';
 
 export default class Header extends Component {
   constructor(props) {
@@ -24,6 +23,7 @@ export default class Header extends Component {
     const { anchorEl } = this.state;
     return (
       <div className="main-wrapper">
+        <Header2>
         <div className="header-wrapper">
           <div className="search-icon margin">
             <div className="color-gray margin" >
@@ -38,11 +38,6 @@ export default class Header extends Component {
             </div>
           </div>
           <div className="menu-content-wrapper">
-
-            <Switch></Switch>
-            <Switch></Switch>
-            <ThemeSwitch></ThemeSwitch>
-
           <i className="material-icons size-30">
               mail_outline
             </i>
@@ -80,7 +75,7 @@ export default class Header extends Component {
           <MenuItem onClick={this.handleCloseMenu}>Log Out</MenuItem>
 
         </Menu>
-
+      </Header2>
       </div >
     )
   }

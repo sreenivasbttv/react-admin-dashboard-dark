@@ -1,25 +1,27 @@
 import React, { useState } from "react";
-import Switch from "../switch";
+import Button from "../button2";
 import { useTheme } from "../../ThemeContext";
-import { withTheme } from 'styled-components';
+import styled, { withTheme } from 'styled-components';
 
 function ThemeSwitch(props) {
-  const [isThemeChanged, setisThemeChanged] = useState(false);
   const themeToggle = useTheme();
-  var toggleStatus;
 
-  const handleClick = (e) => {
-    themeToggle.toggle();
-    let themeStatus = props.theme.mode === 'light' ? false : true;
-    setisThemeChanged(themeStatus);
-    toggleStatus = themeStatus
-    console.log(toggleStatus);
-  };
+  const Wrapper = styled.div`
+    position: fixed;
+    right: 0;
+    bottom: 0;
+
+    button {
+      margin: 0;
+    }
+  `;
 
     return (
-        <Switch round onClick={handleClick} >
-
-        </Switch>
+      <Wrapper>
+        <Button onClick={() => themeToggle.toggle()}>
+          {props.theme.mode === 'dark' ? "Light Mode" : "Dark Mode"}
+        </Button>
+        </Wrapper>
     );
 }
 

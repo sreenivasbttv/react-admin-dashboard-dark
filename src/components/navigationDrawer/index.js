@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import './style.css';
 import UserProfile from '../userprofileblock';
 import { Link } from 'react-router-dom';
+import Drawer from '../Drawer';
 
 export default class NavigationDrawer extends Component {
   constructor() {
@@ -27,6 +28,7 @@ export default class NavigationDrawer extends Component {
   }
   render() {
     return (
+      <Drawer>
       <div className="drawer">
         <div className="drawer-inner">
         <UserProfile data={this.props.userdata} />
@@ -227,6 +229,7 @@ export default class NavigationDrawer extends Component {
         </div>
         </div>
       </div >
+      </Drawer>
     )
   }
 }

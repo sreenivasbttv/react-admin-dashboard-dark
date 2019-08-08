@@ -7,6 +7,11 @@ import MultipleButton from '../multiple_button';
 import VerticalGroup from '../verticalgroup';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
+
+import Button from "../button2";
+import ButtonGroup2 from "../ButtonGroup";
+import Card from "../Card";
+
 // import SocialButtons from '../socialbuttons';
 export default class ButtonLayoutContainer extends Component {
   constructor(props) {
@@ -166,6 +171,53 @@ export default class ButtonLayoutContainer extends Component {
             Buttons
           </div>
         </div>
+
+        <Card>
+          <div>
+            <Button variant="primary" outline="primary" >Primary</Button>
+            <Button outline="default">White</Button>
+            <Button variant="accent" outline="accent">Accent</Button>
+            <Button variant="success" outline="success">Success</Button>
+            <Button variant="danger" outline="danger">Danger</Button>
+            <Button variant="dark" outline="dark"> Dark </Button>
+            <Button outline="default" disabled> Disabled </Button>
+          </div>
+          <div>
+            <Button fill="primary">Primary</Button>
+            <Button fill="white" outline="default">White</Button>
+            <Button fill="accent">Accent</Button>
+            <Button fill="success">Success</Button>
+            <Button fill="danger">Danger</Button>
+            <Button fill="dark"> Dark </Button>
+            <Button disabled> Disabled </Button>
+          </div>
+
+          <br/>
+          <div>
+            <Button outline="primary" rounded>Primary</Button>
+            <Button rounded>White</Button>
+            <Button outline="accent" rounded>Accent</Button>
+            <Button outline="success" rounded>Success</Button>
+            <Button outline="danger" rounded>Danger</Button>
+            <Button outline="dark" rounded> Dark </Button>
+            <Button disabled rounded> Disabled </Button>
+          </div>
+
+          <br/>
+          <div>
+            <Button fill="primary" rounded>Primary</Button>
+            <Button rounded>White</Button>
+            <Button fill="accent" rounded>Accent</Button>
+            <Button fill="success" rounded>Success</Button>
+            <Button fill="danger" rounded>Danger</Button>
+            <Button fill="dark" rounded> Dark </Button>
+            <Button disabled rounded> Disabled </Button>
+          </div>
+
+        </Card>
+
+
+
         <div className="color-white button-style font-size-small font-weight margin-bottom">Button Colors & Styles</div>
         {
           this.state.outline_content_title.map((item, index) => {
@@ -180,6 +232,8 @@ export default class ButtonLayoutContainer extends Component {
           })
         }
         <div>
+
+
           <div className="color-white button-style font-size-small font-weight margin-bottom">Button Sizes</div>
           <div className="color-white button_with_sizes">
             <div className="button-size-header font-size-small font-weight  width-25 ">Extra Small</div>

@@ -11,6 +11,26 @@ export const textColor = theme('mode', {
   dark: color.white
 });
 
+export const sectionBackgroundColor = theme('mode', {
+  light: color.white,
+  dark: color.mirage
+});
+
+export const sectiontextColor = theme('mode', {
+  light: color.charade,
+  dark: color.white
+});
+
+export const headerBackgroundColor = theme('mode', {
+  light: color.santasgray,
+  dark: color.mirage
+});
+
+export const headertextColor = theme('mode', {
+  light: color.charade,
+  dark: color.white
+});
+
 export const buttonBackgroundColor = theme('mode', {
   light: color.dark,
   dark: color.white
