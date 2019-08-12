@@ -1,14 +1,15 @@
 import React from 'react'
 import styled, { css, withTheme } from 'styled-components';
 import color from '../../colors';
+import { buttonBackgroundColor, buttonTextColor, buttonLightBoxShadow, buttonDarkBoxShadow } from '../../theme';
 
 
   const Button = styled.button`
     display: inline-block;
-    background-color: ${color.white};
+    background-color: ${buttonBackgroundColor};
     border: none;
     box-shadow: none;
-    color: ${color.charade};
+    color: ${buttonTextColor};
     cursor: pointer;
     font-size: 0.750em;
     padding: 0.750em 1.875em;
@@ -18,21 +19,40 @@ import color from '../../colors';
     margin-bottom: 12px;
 
     &:disabled {
-      color: ${color.alto};
+      color: ${color.santasgray};
+      background-color: ${color.alto};
       pointer-events: none;
     }
 
     ${props => props.variant && css`
-      color: ${color[props.variant]};
+      background-color: ${color[props.variant]['default']};
+      color: ${color[props.variant]['txtHovercolor']};
+      &:hover {
+        opacity: 0.9;
+      }
     `}
 
-    ${props => props.fill && css`
-      background-color: ${color[props.fill]};
+    ${props => props.variant==='light' && css`
+      box-shadow: ${buttonLightBoxShadow};
+    `}
+
+    ${props => props.variant==='dark' && css`
+      box-shadow: ${buttonDarkBoxShadow};
     `}
 
     ${props => props.outline && css`
-      border:1px solid ${color[props.outline]};
-      background-color: transparent;
+      color: ${color[props.outline]['txtcolor']};
+      border:1px solid ${color[props.outline]['bordercolor']};
+      background-color: ${color[props.outline]['bgcolor']};
+
+      &:hover {
+        background-color: ${color[props.outline]['default']};
+        color: ${color[props.outline]['txtHovercolor']};
+      }
+
+      &:disabled {
+        background-color: transparent;
+      }
     `}
 
     ${props => props.rounded && css`

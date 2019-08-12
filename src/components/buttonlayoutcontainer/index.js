@@ -11,6 +11,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Button from "../button2";
 import ButtonGroup2 from "../ButtonGroup";
 import Card from "../Card";
+import Divider from "../divider";
 
 // import SocialButtons from '../socialbuttons';
 export default class ButtonLayoutContainer extends Component {
@@ -173,46 +174,51 @@ export default class ButtonLayoutContainer extends Component {
         </div>
 
         <Card>
+
           <div>
-            <Button variant="primary" outline="primary" >Primary</Button>
-            <Button outline="default">White</Button>
-            <Button variant="accent" outline="accent">Accent</Button>
-            <Button variant="success" outline="success">Success</Button>
-            <Button variant="danger" outline="danger">Danger</Button>
-            <Button variant="dark" outline="dark"> Dark </Button>
-            <Button outline="default" disabled> Disabled </Button>
+            <Button outline="primary" >Primary</Button>
+            <Button outline="light">White</Button>
+            <Button outline="accent">Accent</Button>
+            <Button outline="success">Success</Button>
+            <Button outline="danger">Danger</Button>
+            <Button outline="dark"> Dark </Button>
+            <Button outline="light" disabled> Disabled </Button>
           </div>
+          <Divider />
+          <br/>
+
           <div>
-            <Button fill="primary">Primary</Button>
-            <Button fill="white" outline="default">White</Button>
-            <Button fill="accent">Accent</Button>
-            <Button fill="success">Success</Button>
-            <Button fill="danger">Danger</Button>
-            <Button fill="dark"> Dark </Button>
+            <Button variant="primary">Primary</Button>
+            <Button variant="light">White</Button>
+            <Button variant="accent">Accent</Button>
+            <Button variant="success">Success</Button>
+            <Button variant="danger">Danger</Button>
+            <Button variant="dark"> Dark </Button>
             <Button disabled> Disabled </Button>
           </div>
-
+          <Divider />
           <br/>
           <div>
             <Button outline="primary" rounded>Primary</Button>
-            <Button rounded>White</Button>
+            <Button outline="light" rounded>White</Button>
             <Button outline="accent" rounded>Accent</Button>
             <Button outline="success" rounded>Success</Button>
             <Button outline="danger" rounded>Danger</Button>
             <Button outline="dark" rounded> Dark </Button>
-            <Button disabled rounded> Disabled </Button>
+            <Button outline="light" disabled rounded> Disabled </Button>
           </div>
-
+          <Divider />
           <br/>
           <div>
-            <Button fill="primary" rounded>Primary</Button>
-            <Button rounded>White</Button>
-            <Button fill="accent" rounded>Accent</Button>
-            <Button fill="success" rounded>Success</Button>
-            <Button fill="danger" rounded>Danger</Button>
-            <Button fill="dark" rounded> Dark </Button>
+            <Button variant="primary" rounded>Primary</Button>
+            <Button variant="light"rounded>White</Button>
+            <Button variant="accent" rounded>Accent</Button>
+            <Button variant="success" rounded>Success</Button>
+            <Button variant="danger" rounded>Danger</Button>
+            <Button variant="dark" rounded> Dark </Button>
             <Button disabled rounded> Disabled </Button>
           </div>
+          
 
         </Card>
 

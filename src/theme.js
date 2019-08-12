@@ -2,13 +2,13 @@ import theme from 'styled-theming';
 import color from './colors';
 
 export const backgroundColor = theme('mode', {
-  light: color.athensgray,
-  dark: color.ebonyclay
+  light: color.themeLight.bgColor,
+  dark: color.themeDark.bgColor
 });
 
 export const textColor = theme('mode', {
-  light: color.charade,
-  dark: color.white
+  light: color.themeLight.txtColor,
+  dark: color.themeDark.txtColor
 });
 
 export const sectionBackgroundColor = theme('mode', {
@@ -32,11 +32,21 @@ export const headertextColor = theme('mode', {
 });
 
 export const buttonBackgroundColor = theme('mode', {
-  light: color.dark,
-  dark: color.white
+  light: color.themeLight.bgColor,
+  dark: color.themeDark.bgColor
 });
 
 export const buttonTextColor = theme('mode', {
-  light: '#eee',
-  dark: color.charade
+  light: color.themeLight.txtColor,
+  dark: color.themeDark.txtColor
+});
+
+export const buttonLightBoxShadow = theme('mode', {
+  light: color.lightBoxShadow,
+  dark: ''
+});
+
+export const buttonDarkBoxShadow = theme('mode', {
+  light: '',
+  dark: color.darkBoxShadow
 });
