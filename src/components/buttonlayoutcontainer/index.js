@@ -218,8 +218,98 @@ export default class ButtonLayoutContainer extends Component {
             <Button variant="dark" rounded> Dark </Button>
             <Button disabled rounded> Disabled </Button>
           </div>
-          
 
+          <Divider />
+          <br/>
+        
+
+        </Card>
+       
+
+        <Card>
+        <div>
+            <Button variant="primary" size="xs">xs</Button>
+            <Button variant="primary" size="sm">Small</Button>
+            <Button variant="primary">Default</Button>
+            <Button variant="primary" size="lg">large</Button>
+          </div>  
+            <br/>
+          <div>  
+            <Button variant="light" size="xs">xs</Button>
+            <Button variant="light" size="sm">Small</Button>
+            <Button variant="light">Default</Button>
+            <Button variant="light" size="lg">large</Button>
+          </div>  
+            <br/>
+          <div>  
+            <Button size="xs" disabled>xs</Button>
+            <Button size="sm" disabled>Small</Button>
+            <Button disabled>Default</Button>
+            <Button size="lg" disabled>large</Button>
+          </div>  
+        </Card>
+
+
+        <Card>
+          <ButtonGroup2>
+            <Button variant="primary">xs</Button>
+            <Button variant="primary" size="sm">Small</Button>
+            <Button variant="primary">Default</Button>
+            <Button variant="primary" size="lg">large</Button>
+          </ButtonGroup2>    
+          <br/>
+          <ButtonGroup2 rounded>
+            <Button variant="primary">xs</Button>
+            <Button variant="primary" size="sm">Small</Button>
+            <Button variant="primary">Default</Button>
+            <Button variant="primary" size="lg">large</Button>
+          </ButtonGroup2>    
+          <br/>
+          <ButtonGroup2 vertical>
+            <Button variant="primary">xs</Button>
+            <Button variant="primary">Small</Button>
+            <Button variant="primary">Default</Button>
+            <Button variant="primary">large</Button>
+          </ButtonGroup2>    
+          <br/>
+
+          <ButtonGroup2 condensed>
+            <Button variant="primary">1</Button>
+            <Button variant="primary">2</Button>
+            <Button variant="primary">3</Button>
+            <Button variant="primary">4</Button>
+            <Button variant="primary">5</Button>
+            <Button variant="primary">6</Button>
+            <Button variant="primary">7</Button>
+            <Button variant="primary">8</Button>
+          </ButtonGroup2>    
+          <br/>
+
+          <ButtonGroup2 condensed>
+            <Button variant="light">1</Button>
+            <Button variant="light">2</Button>
+            <Button variant="light">3</Button>
+            <Button variant="light">4</Button>
+            <Button variant="light">5</Button>
+            <Button variant="light">6</Button>
+            <Button variant="light">7</Button>
+            <Button variant="light">8</Button>
+          </ButtonGroup2>    
+          <br/>
+
+          <ButtonGroup2 rounded>
+            <Button variant="light" size="xs">xs</Button>
+            <Button variant="light" size="sm">Small</Button>
+            <Button variant="light">Default</Button>
+            <Button variant="light" size="lg">large</Button>
+          </ButtonGroup2>        
+            <br/>
+          <ButtonGroup2>    
+            <Button size="xs" disabled>xs</Button>
+            <Button size="sm" disabled>Small</Button>
+            <Button disabled>Default</Button>
+            <Button size="lg" disabled>large</Button>
+          </ButtonGroup2>
         </Card>
 
 

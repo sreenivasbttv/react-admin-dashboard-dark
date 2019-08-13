@@ -60,7 +60,23 @@ import { buttonBackgroundColor, buttonTextColor, buttonLightBoxShadow, buttonDar
     `}
 
     ${props => props.size && css`
-      border-radius:25px;
+      min-width: inherit;
+    `}
+
+    ${props => props.size==='xs' && css`
+      font-size:10px;
+      padding: 10px 25px;
+      text-transform: uppercase;
+    `}
+
+    ${props => props.size==='sm' && css`
+      font-size:10px;
+      padding: 10px 30px;
+    `}
+
+    ${props => props.size==='lg' && css`
+      font-size:16px;
+      padding: 12px 40px;
     `}
   `;
 
