@@ -12,6 +12,7 @@ import Button from "../button2";
 import ButtonGroup2 from "../ButtonGroup";
 import Card from "../Card";
 import Divider from "../divider";
+import Heading from '../Heading';
 
 // import SocialButtons from '../socialbuttons';
 export default class ButtonLayoutContainer extends Component {
@@ -176,6 +177,7 @@ export default class ButtonLayoutContainer extends Component {
         <Card>
 
           <div>
+            <Heading>Outline</Heading>
             <Button outline="primary" >Primary</Button>
             <Button outline="light">White</Button>
             <Button outline="accent">Accent</Button>
@@ -188,6 +190,7 @@ export default class ButtonLayoutContainer extends Component {
           <br/>
 
           <div>
+            <Heading>Filled</Heading>
             <Button variant="primary">Primary</Button>
             <Button variant="light">White</Button>
             <Button variant="accent">Accent</Button>
@@ -199,6 +202,7 @@ export default class ButtonLayoutContainer extends Component {
           <Divider />
           <br/>
           <div>
+          <Heading>Rounded Outline</Heading>
             <Button outline="primary" rounded>Primary</Button>
             <Button outline="light" rounded>White</Button>
             <Button outline="accent" rounded>Accent</Button>
@@ -210,6 +214,7 @@ export default class ButtonLayoutContainer extends Component {
           <Divider />
           <br/>
           <div>
+          <Heading>Rounded Filled</Heading>
             <Button variant="primary" rounded>Primary</Button>
             <Button variant="light"rounded>White</Button>
             <Button variant="accent" rounded>Accent</Button>
@@ -218,11 +223,6 @@ export default class ButtonLayoutContainer extends Component {
             <Button variant="dark" rounded> Dark </Button>
             <Button disabled rounded> Disabled </Button>
           </div>
-
-          <Divider />
-          <br/>
-        
-
         </Card>
        
 
@@ -251,28 +251,36 @@ export default class ButtonLayoutContainer extends Component {
 
 
         <Card>
+        <Heading>Button Group</Heading>
+        <ButtonGroup2>    
+            <Button variant="light">Left</Button>
+            <Button variant="light">Middle</Button>
+            <Button variant="light">Right</Button>
+          </ButtonGroup2>
+          <br/>
+          <ButtonGroup2 rounded>
+            <Button variant="light">Left</Button>
+            <Button variant="light">Middle</Button>
+            <Button variant="light">Right</Button>
+          </ButtonGroup2>
+          <br/>
+
           <ButtonGroup2>
-            <Button variant="primary">xs</Button>
-            <Button variant="primary" size="sm">Small</Button>
-            <Button variant="primary">Default</Button>
-            <Button variant="primary" size="lg">large</Button>
+            <Button variant="primary">Left</Button>
+            <Button variant="primary">Middle</Button>
+            <Button variant="primary">Right</Button>
           </ButtonGroup2>    
           <br/>
           <ButtonGroup2 rounded>
-            <Button variant="primary">xs</Button>
-            <Button variant="primary" size="sm">Small</Button>
-            <Button variant="primary">Default</Button>
-            <Button variant="primary" size="lg">large</Button>
-          </ButtonGroup2>    
-          <br/>
-          <ButtonGroup2 vertical>
-            <Button variant="primary">xs</Button>
-            <Button variant="primary">Small</Button>
-            <Button variant="primary">Default</Button>
-            <Button variant="primary">large</Button>
+            <Button variant="primary">Left</Button>
+            <Button variant="primary">Middle</Button>
+            <Button variant="primary">Right</Button>
           </ButtonGroup2>    
           <br/>
 
+          <Divider />
+          <br/>
+          <Heading>Multiple</Heading>
           <ButtonGroup2 condensed>
             <Button variant="primary">1</Button>
             <Button variant="primary">2</Button>
@@ -297,19 +305,16 @@ export default class ButtonLayoutContainer extends Component {
           </ButtonGroup2>    
           <br/>
 
-          <ButtonGroup2 rounded>
-            <Button variant="light" size="xs">xs</Button>
-            <Button variant="light" size="sm">Small</Button>
-            <Button variant="light">Default</Button>
-            <Button variant="light" size="lg">large</Button>
-          </ButtonGroup2>        
-            <br/>
-          <ButtonGroup2>    
-            <Button size="xs" disabled>xs</Button>
-            <Button size="sm" disabled>Small</Button>
-            <Button disabled>Default</Button>
-            <Button size="lg" disabled>large</Button>
+          <Divider />
+          <br/>
+          <Heading>Vertical Group</Heading>
+          <ButtonGroup2 vertical>
+            <Button variant="primary">xs</Button>
+            <Button variant="primary">Small</Button>
+            <Button variant="primary">Default</Button>
+            <Button variant="primary">large</Button>
           </ButtonGroup2>
+          
         </Card>
 
 

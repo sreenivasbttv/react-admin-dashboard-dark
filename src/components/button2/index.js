@@ -1,4 +1,3 @@
-import React from 'react'
 import styled, { css, withTheme } from 'styled-components';
 import color from '../../colors';
 import { buttonBackgroundColor, buttonTextColor, buttonLightBoxShadow, buttonDarkBoxShadow } from '../../theme';
