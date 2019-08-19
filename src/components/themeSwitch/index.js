@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Button from "../button2";
 import { useTheme } from "../../ThemeContext";
 import styled, { withTheme } from 'styled-components';

@@ -1,6 +1,5 @@
 import React from 'react'
-import styled, { css, withTheme } from 'styled-components';
-import { useTheme } from "../../ThemeContext";
+import styled, { withTheme } from 'styled-components';
 import { sectionBackgroundColor } from '../../theme';
 
 function Drawer(props) {
@@ -14,6 +13,7 @@ function Drawer(props) {
     overflow-y: auto;
     background-color: ${sectionBackgroundColor}
     box-shadow: 1px 0px 15px -5px rgba(0,0,0,0.4);
+    z-index: 1000;
   `;
 
   return (

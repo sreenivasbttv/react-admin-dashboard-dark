@@ -8,8 +8,7 @@ import Button from '../button2';
     margin-bottom: 20px;
 
     ${Button} {
-      margin-right: 0;
-      margin-bottom: 0;
+      margin: 0;
       font-size: 12px;
       min-width: inherit;
       border-radius: 0;

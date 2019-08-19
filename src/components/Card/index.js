@@ -1,6 +1,4 @@
-import React from 'react'
-import styled, { css, withTheme } from 'styled-components';
-import { useTheme } from "../../ThemeContext";
+import styled, { withTheme } from 'styled-components';
 import { sectionBackgroundColor } from '../../theme';
 
 const Card = styled.div`

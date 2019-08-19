@@ -1,6 +1,5 @@
 import React from 'react'
-import styled, { css, withTheme } from 'styled-components';
-import { useTheme } from "../../ThemeContext";
+import styled, { withTheme } from 'styled-components';
 import { headerBackgroundColor } from '../../theme';
 
 function Header2(props) {
@@ -14,7 +13,8 @@ function Header2(props) {
     right: 0;
     left: 0;
     height: 80px;
-    background-color: ${headerBackgroundColor}
+    background-color: ${headerBackgroundColor};
+    z-index: 999;
   `;
 
   return (
