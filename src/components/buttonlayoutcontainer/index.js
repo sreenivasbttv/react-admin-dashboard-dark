@@ -8,6 +8,7 @@ import Divider from "../divider";
 import Heading from '../Heading';
 import DropdownButton from '../DropdownButton';
 import DropdownItem from '../Dropdown2/DropdownItem';
+import { Row, Col } from '../Grid';
 
 // import SocialButtons from '../socialbuttons';
 export default class ButtonLayoutContainer extends Component {
@@ -74,26 +75,32 @@ export default class ButtonLayoutContainer extends Component {
        
 
         <Card>
-        <div>
-            <Button variant="primary" size="xs">xs</Button>
-            <Button variant="primary" size="sm">Small</Button>
-            <Button variant="primary">Default</Button>
+          <Row>
+            <Col> 
+              <Heading>Extra Small</Heading> 
+              <Button variant="primary" size="xs">xs</Button>
+              <Button variant="light" size="xs">xs</Button>
+              <Button size="xs" disabled>xs</Button>
+            </Col>
+            <Col>
+              <Heading>Small</Heading>
+              <Button variant="primary" size="sm">Small</Button> 
+              <Button variant="light" size="sm">Small</Button>
+              <Button size="sm" disabled>Small</Button>
+            </Col>
+            <Col>
+              <Heading>Default</Heading>
+              <Button variant="primary">Default</Button>
+              <Button variant="light">Default</Button>
+              <Button disabled>Default</Button>
+            </Col>
+            <Col>
+            <Heading>Large</Heading>
             <Button variant="primary" size="lg">large</Button>
-          </div>  
-            <br/>
-          <div>  
-            <Button variant="light" size="xs">xs</Button>
-            <Button variant="light" size="sm">Small</Button>
-            <Button variant="light">Default</Button>
             <Button variant="light" size="lg">large</Button>
-          </div>  
-            <br/>
-          <div>  
-            <Button size="xs" disabled>xs</Button>
-            <Button size="sm" disabled>Small</Button>
-            <Button disabled>Default</Button>
             <Button size="lg" disabled>large</Button>
-          </div>  
+            </Col>
+          </Row>
         </Card>
 
         <Card>
