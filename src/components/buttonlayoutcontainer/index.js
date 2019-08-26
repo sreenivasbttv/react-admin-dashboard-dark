@@ -9,6 +9,8 @@ import Heading from '../Heading';
 import DropdownButton from '../DropdownButton';
 import DropdownItem from '../Dropdown2/DropdownItem';
 import { Row, Col } from '../Grid';
+import {MaterialDesign} from '../Icon/providers';
+import Icon from '../Icon';
 
 // import SocialButtons from '../socialbuttons';
 export default class ButtonLayoutContainer extends Component {
@@ -38,7 +40,7 @@ export default class ButtonLayoutContainer extends Component {
           <br/>
 
           <div>
-            <Heading>Filled</Heading>
+            <Heading> Filled</Heading>
             <Button variant="primary">Primary</Button>
             <Button variant="light">White</Button>
             <Button variant="accent">Accent</Button>
@@ -207,6 +209,26 @@ export default class ButtonLayoutContainer extends Component {
             <Button variant="primary">large</Button>
           </ButtonGroup>
         </Card>
+
+        
+          <Row>
+            <Col>
+              <Card>
+                <Row>
+                  <Col>
+                  <Heading>Small</Heading>
+                  <Button> <Icon iconName="FaTwitter"></Icon></Button>
+                  </Col>
+                </Row>
+              </Card>
+            </Col>
+            <Col>
+            <Card>
+                
+                </Card>
+            </Col>
+          </Row>
+        
       </div>
     )
   }

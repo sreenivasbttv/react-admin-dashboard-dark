@@ -50,3 +50,8 @@ export const buttonDarkBoxShadow = theme('mode', {
   light: '',
   dark: color.darkBoxShadow
 });
+
+export const iconColor = theme('mode', {
+  light: color.mirage,
+  dark: color.white
+});
