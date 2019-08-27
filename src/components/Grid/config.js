@@ -3,10 +3,10 @@ import { css } from 'styled-components';
 export const DEVICES = ['xs', 'sm', 'md', 'lg', 'xl'];
 export const BASE_CONF = {
   mediaQuery: 'only screen',
-  columns: { // Based on Material UI columns https://material.io/design/layout/responsive-layout-grid.html#columns-gutters-margins
-    xs: 4,
-    sm: 8,
-    md: 8,
+  columns: {
+    xs: 12,
+    sm: 12,
+    md: 12,
     lg: 12,
     xl: 12
   },
@@ -25,15 +25,15 @@ export const BASE_CONF = {
     xl: 1
   },
   breakpoints: {
-    xs: 0,
+    xs: 320,
     sm: 768,
     md: 1024,
     lg: 1440,
     xl: 1920
   },
   container: {
-    xs: 'full', // 'full' = max-width: 100%
-    sm: 'full', // 'full' = max-width: 100%
+    xs: 'full',
+    sm: 740,
     md: 1004,
     lg: 1400, // max-width: 1440px
     xl: 1440 // max-width: 1440px

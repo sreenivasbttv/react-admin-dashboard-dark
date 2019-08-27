@@ -78,25 +78,25 @@ export default class ButtonLayoutContainer extends Component {
 
         <Card>
           <Row>
-            <Col> 
+            <Col xs={6} md={3}> 
               <Heading>Extra Small</Heading> 
               <Button variant="primary" size="xs">xs</Button>
               <Button variant="light" size="xs">xs</Button>
               <Button size="xs" disabled>xs</Button>
             </Col>
-            <Col>
+            <Col xs={6} md={3}>
               <Heading>Small</Heading>
               <Button variant="primary" size="sm">Small</Button> 
               <Button variant="light" size="sm">Small</Button>
               <Button size="sm" disabled>Small</Button>
             </Col>
-            <Col>
+            <Col xs={6} md={3}>
               <Heading>Default</Heading>
               <Button variant="primary">Default</Button>
               <Button variant="light">Default</Button>
               <Button disabled>Default</Button>
             </Col>
-            <Col>
+            <Col xs={6} md={3}>
             <Heading>Large</Heading>
             <Button variant="primary" size="lg">large</Button>
             <Button variant="light" size="lg">large</Button>
@@ -146,7 +146,9 @@ export default class ButtonLayoutContainer extends Component {
 
         <Card>
         <Heading>Button Group</Heading>
-        <ButtonGroup>    
+        <Row>
+          <Col>
+          <ButtonGroup>    
             <Button variant="light">Left</Button>
             <Button variant="light">Middle</Button>
             <Button variant="light">Right</Button>
@@ -158,7 +160,8 @@ export default class ButtonLayoutContainer extends Component {
             <Button variant="light">Right</Button>
           </ButtonGroup>
           <br/>
-
+          </Col>
+          <Col>
           <ButtonGroup>
             <Button variant="primary">Left</Button>
             <Button variant="primary">Middle</Button>
@@ -171,6 +174,9 @@ export default class ButtonLayoutContainer extends Component {
             <Button variant="primary">Right</Button>
           </ButtonGroup>    
           <br/>
+          </Col>
+        </Row>
+      
 
           <Divider />
           <br/>
@@ -212,17 +218,23 @@ export default class ButtonLayoutContainer extends Component {
 
         
           <Row>
-            <Col>
+            <Col lg={6}>
               <Card>
                 <Row>
                   <Col>
                   <Heading>Small</Heading>
                   <Button> <Icon iconName="FaTwitter"></Icon></Button>
+
+                  <Icon iconName="FaTwitter"></Icon>
+                  <Icon iconName="FaTwitter"></Icon>
+                  <Icon iconName="FaTwitter" size="20"></Icon>
+                  <Icon iconName="FaTwitter" size="30"></Icon>
+
                   </Col>
                 </Row>
               </Card>
             </Col>
-            <Col>
+            <Col lg={6}>
             <Card>
                 
                 </Card>

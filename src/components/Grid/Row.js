@@ -4,10 +4,7 @@ import config, { DEVICES } from './config';
 
 const Row = styled.div`
   display: flex;
-  flex: 1 0 auto;
-  flex-direction: auto;
   flex-wrap: wrap;
-  box-sizing: border-box;
   
   ${props => css`
     ${DEVICES.map(d =>

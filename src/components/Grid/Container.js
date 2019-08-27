@@ -6,7 +6,6 @@ const Container = styled.div`
   margin-left: auto;
   margin-right: auto;
   max-width: 100%;
-  box-sizing: border-box;
 
   ${props => css`
     ${DEVICES.map(d =>

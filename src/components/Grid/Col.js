@@ -3,7 +3,10 @@ import PropTypes from 'prop-types';
 import config, { DEVICES } from './config';
 
 const Col = styled.div`
-  flex: 1 0 auto;
+  position: relative;
+  width: 100%;
+  flex-basis: 0;
+  flex-grow: 1;
   max-width: 100%;
 
   ${props => !props.noGutter && css`
@@ -18,7 +21,7 @@ const Col = styled.div`
     ${DEVICES.map(d =>
     config(props).breakpoints[d] && config(props).media[d]`
       ${props[d] && `
-        flex: 1 1 ${(props[d] / config(props).columns[d]) * 100}%;
+        flex: 0 0 ${(props[d] / config(props).columns[d]) * 100}%;
         max-width: ${(props[d] / config(props).columns[d]) * 100}%;
       `}
     `)}

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import styled, { css, withTheme } from 'styled-components';
+import styled, { css, withTheme, ThemeProvider } from 'styled-components';
 import * as FontAwesome from "react-icons/fa";
 import { iconColor } from '../../theme';
 
@@ -8,12 +8,12 @@ const StyledIcon = styled.span`
   color: ${iconColor};
   margin-right: 5px;
 
-  ${props => props.size && css`
-    font-size: ${props.size}+'px';
+  ${props => props.theme.size && css`
+    font-size: ${props.theme.size}px;
   `}
 
-  ${props => props.color && css`
-    color: ${props.color};
+  ${props => props.theme.color && css`
+    color: ${props.theme.color};
   `}
 `;
 
@@ -41,7 +41,9 @@ class Icon extends Component {
     if (!this.state.hasError) {
       return (
         <React.Fragment>
-          <StyledIcon> { this.icon }</StyledIcon>
+          <ThemeProvider theme={this.props}>
+            <StyledIcon> { this.icon }</StyledIcon>
+          </ThemeProvider>
         </React.Fragment>
       )
     }
