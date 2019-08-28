@@ -9,10 +9,8 @@ import Heading from '../Heading';
 import DropdownButton from '../DropdownButton';
 import DropdownItem from '../Dropdown2/DropdownItem';
 import { Row, Col } from '../Grid';
-import {MaterialDesign} from '../Icon/providers';
 import Icon from '../Icon';
 
-// import SocialButtons from '../socialbuttons';
 export default class ButtonLayoutContainer extends Component {
 
   render() {
@@ -75,7 +73,6 @@ export default class ButtonLayoutContainer extends Component {
           </div>
         </Card>
        
-
         <Card>
           <Row>
             <Col xs={6} md={3}> 
@@ -181,19 +178,9 @@ export default class ButtonLayoutContainer extends Component {
           <Divider />
           <br/>
           <Heading>Multiple</Heading>
-          <ButtonGroup condensed>
-            <Button variant="primary">1</Button>
-            <Button variant="primary">2</Button>
-            <Button variant="primary">3</Button>
-            <Button variant="primary">4</Button>
-            <Button variant="primary">5</Button>
-            <Button variant="primary">6</Button>
-            <Button variant="primary">7</Button>
-            <Button variant="primary">8</Button>
-          </ButtonGroup>    
-          <br/>
-
-          <ButtonGroup condensed>
+          <Row>
+            <Col>
+            <ButtonGroup condensed>
             <Button variant="light">1</Button>
             <Button variant="light">2</Button>
             <Button variant="light">3</Button>
@@ -204,6 +191,21 @@ export default class ButtonLayoutContainer extends Component {
             <Button variant="light">8</Button>
           </ButtonGroup>    
           <br/>
+            </Col>
+            <Col>
+            <ButtonGroup condensed>
+            <Button variant="primary">1</Button>
+            <Button variant="primary">2</Button>
+            <Button variant="primary">3</Button>
+            <Button variant="primary">4</Button>
+            <Button variant="primary">5</Button>
+            <Button variant="primary">6</Button>
+            <Button variant="primary">7</Button>
+            <Button variant="primary">8</Button>
+          </ButtonGroup>    
+          <br/>
+            </Col>
+          </Row>
 
           <Divider />
           <br/>
@@ -223,21 +225,26 @@ export default class ButtonLayoutContainer extends Component {
                 <Row>
                   <Col>
                   <Heading>Small</Heading>
-                  <Button> <Icon iconName="FaTwitter"></Icon></Button>
-
-                  <Icon iconName="FaTwitter"></Icon>
-                  <Icon iconName="FaTwitter"></Icon>
-                  <Icon iconName="FaTwitter" size="20"></Icon>
-                  <Icon iconName="FaTwitter" size="30"></Icon>
-
+                  <Button hasIcon> <Icon iconName="FaTwitter"></Icon> Twitter </Button>
+                  <Button variant="primary" hasIcon> <Icon iconName="FaTwitter"></Icon> Twitter </Button>
+                  <Button variant="primary" hasIcon iconOnly> <Icon iconName="FaPlus"></Icon> </Button>
+                  <Button variant="primary" size="sm" hasIcon iconOnly> <Icon iconName="FaPen"></Icon> </Button>
                   </Col>
                 </Row>
               </Card>
             </Col>
             <Col lg={6}>
-            <Card>
-                
-                </Card>
+              <Card>
+                <Row>
+                  <Col>
+                    <Heading>Social Icons</Heading>
+                    <Icon iconName="FaFacebookF"></Icon>
+                    <Icon iconName="FaGooglePlusG"></Icon>
+                    <Icon iconName="FaTwitterSquare" size="20"></Icon>
+                    <Icon iconName="FaTwitter" size="30" color="red"></Icon>
+                  </Col>
+                </Row>
+              </Card>
             </Col>
           </Row>
         

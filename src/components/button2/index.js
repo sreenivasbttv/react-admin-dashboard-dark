@@ -77,6 +77,44 @@ import { buttonBackgroundColor, buttonTextColor, buttonLightBoxShadow, buttonDar
       font-size:16px;
       padding: 12px 40px;
     `}
+
+    ${props => props.hasIcon && css`
+      min-width: unset;
+      display: inline-flex;
+      outline: 0;
+
+      span {
+        color: inherit;
+      }
+    `}
+
+    ${props => props.iconOnly && css`
+      min-width: unset;
+      display: inline-flex;
+      align-items: center;
+      vertical-align: middle;
+      justify-content: center;
+      padding: 0;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      outline: 0;
+
+      span {
+        font-size: inherit;
+        color: inherit;
+        margin-right: 0;
+        width: 100%;
+        display: inherit;
+        align-items: inherit;
+        justify-content: inherit;
+      }
+    `}
+
+    ${props => props.iconOnly && props.size==='sm' && css`
+       width: 30px;
+       height: 30px;
+    `}
   `;
 
 export default withTheme(Button);
