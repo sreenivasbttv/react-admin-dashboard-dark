@@ -15,11 +15,22 @@ import MenusView from './views/menus';
 import CardLayoutContainer from './components/cardlayoutcontainer';
 import ThemeSwitch from './components/themeSwitch';
 
+import { NavToggleIcon } from './components/Navbar';
+import Drawer from './components/Drawer';
+import UserProfile from './components/userprofileblock';
+import navigationData from './data/mainNavigation';
+import { Navbar } from './components/Navbar';
+
 class App extends Component {
 
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
+
+      drawerVisible: false,
+      windowWidth: null,
+      drawerToggleIcon : false,
+
       isClicked: false,
       active_menu_item: 'dashboard',
       clr_arr: [],
@@ -33,30 +44,6 @@ class App extends Component {
         name: "Leonid Aristov",
         role: "Project Manager"
       },
-      form_submenu: [
-        {
-          title: 'Form Layout'
-        },
-        {
-          title: 'Form Inputs'
-        },
-        {
-          title: 'Form Controls'
-        }
-      ],
-      pages_submenu: [
-        {
-          title: 'Listing'
-        }
-      ],
-      components_submenu: [
-        {
-          title: 'Buttons'
-        },
-        {
-          title: 'Cards'
-        }
-      ],
       product_listing: {
         title: 'Listing',
         three_column_listing: {
@@ -124,11 +111,26 @@ class App extends Component {
         }
       }
     }
+
+    this.toggleDrawer = this.toggleDrawer.bind(this);
   }
 
-  handelClick = () => {
-    console.log("dfghjk");
-    this.setState({ isClicked: !this.state.isClicked });
+  checkWindowWidth = () => {
+    let lastWidth = this.state.windowWidth;
+    const presentWidth = window.screen.width;
+    if (!lastWidth || (lastWidth !== presentWidth)) {
+      lastWidth = presentWidth;
+      this.setState({windowWidth: presentWidth});
+      if (presentWidth > 768) {
+        this.setState({drawerVisible: true});
+      } else {
+        this.setState({drawerVisible: false});
+      }
+    }
+  }
+
+  toggleDrawer = () => {
+    this.setState({drawerVisible: !this.state.drawerVisible});
   }
 
   updateActiveMenu = (active_menu_item) => {
@@ -138,28 +140,32 @@ class App extends Component {
   componentDidMount = () => {
     let clr_arr = ["#db1c58", "#56f442", "#e8d90d"];
     this.setState({ clr_arr: clr_arr });
+    this.checkWindowWidth();
+    if (typeof window !== 'undefined') {
+      window.addEventListener('orientationchange', this.checkWindowWidth, false)
+      window.addEventListener('resize', this.checkWindowWidth, false)
+    }
+  }
+
+  componentWillUnmount () {
+    window.removeEventListener('orientationchange', this.setScreen)
+    window.removeEventListener('resize', this.setScreen)
   }
 
   render() {
     return (
       <div className="app">
         <Router>
-          <Header
-            isClicked={this.state.isClicked}
-            handelClick={this.handelClick}
-          />
-          {
-            this.state.isClicked === true ? <button className="logout-btn">Logout</button> : null
-          }
+          <Header>
+            <NavToggleIcon onClick={this.toggleDrawer} open={this.state.drawerVisible}/>
+          </Header>  
 
-          <NavigationDrawer
-            userdata={this.state.userProfile}
-            active_menu_item={this.state.active_menu_item}
-            updateActiveMenu={this.updateActiveMenu}
-            subform={this.state.form_submenu}
-            subpage={this.state.pages_submenu}
-            subcomponent={this.state.components_submenu}
-          />
+          <Drawer placement="left" visible={this.state.drawerVisible}>
+            <UserProfile data={this.state.userProfile} />
+            <Navbar items={navigationData}/>
+          </Drawer>  
+
+          
           <div className="content-wrapper">
             <div className="inner-content-wrapper">
 

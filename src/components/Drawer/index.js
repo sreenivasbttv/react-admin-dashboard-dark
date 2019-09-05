@@ -4,7 +4,7 @@ import { sectionBackgroundColor } from '../../theme';
 
 const Container = styled.div`
   position: fixed;
-  width: 18%;
+  width: 0%;
   top: 0;
   height: 100%;
   overflow-y: auto;
@@ -16,10 +16,24 @@ const Container = styled.div`
   ${props => props.placement && css`
     ${props => props.placement === 'left' && css`
         left: 0;
+        ${props => props.visible  && css`
+          width: 18%;
+
+          @media (max-width: 768px) {
+            min-width: 250px;
+          }
+        `}
     `}
 
     ${props => props.placement === 'right' && css`
         right: 0;
+        ${props => props.visible && css`
+          width: 18%;
+
+          @media (max-width: 768px) {
+            min-width: 250px;
+          }
+        `}
     `}
 
     ${props => props.placement === 'top' && css`
@@ -38,6 +52,11 @@ const Container = styled.div`
   `}
 `;
 
+const DrawerWrapper = styled.div`
+  transition: transform .3s cubic-bezier(.7, .3, .1, 1);
+  padding: 80px 0;
+`;
+
 class Drawer extends Component {
   constructor(props) {
     super(props);
@@ -48,7 +67,6 @@ class Drawer extends Component {
     }
   }
 
-
   render() {
     const { placement, visible } = this.props;
 
@@ -56,7 +74,10 @@ class Drawer extends Component {
       <Container 
         placement={placement}
         visible={visible}>
-        {this.props.children}
+        <DrawerWrapper
+          placement={placement}>
+          {this.props.children}
+        </DrawerWrapper>
       </Container>
     )
   }

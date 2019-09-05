@@ -4,7 +4,7 @@ import Button from '../button2';
   const ButtonGroup = styled.div`
     display: inline-flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     margin-bottom: 20px;
 
     ${Button} {

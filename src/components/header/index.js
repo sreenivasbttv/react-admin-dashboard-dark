@@ -1,82 +1,39 @@
 import React, { Component } from 'react';
+import styled, { withTheme } from 'styled-components';
 import './style.css';
-import Menu from '@material-ui/core/Menu';
-import MenuItem from '@material-ui/core/MenuItem';
-import Header2 from '../Header2';
+import { headerBackgroundColor } from '../../theme';
 
-export default class Header extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      anchorEl: null,
-    }
+const Container = styled.div`
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  padding:0px;
+  top: 0;
+  position: fixed;
+  right: 0;
+  left: 0;
+  height: 80px;
+  background-color: ${headerBackgroundColor};
+  z-index: 999;
+
+  @media (max-width: 768px) {
+    height: 50px;
+    padding: 0 20px;
+    justify-content: flex-end;
   }
+`;
 
-  handelClick = event => {
-    this.setState({ anchorEl: event.currentTarget });
-  };
-
-  handleCloseMenu = () => {
-    this.setState({ anchorEl: null });
-  };
+class Header extends Component {
   render() {
-    const { anchorEl } = this.state;
+    const { children } = this.props
     return (
       <div className="main-wrapper">
-        <Header2>
-        <div className="header-wrapper">
-          <div className="search-icon margin">
-            <div className="color-gray margin" >
-              <i className="material-icons font-size-30">
-                search
-             </i>
-            </div >
-            <div >
-              <input className="color-gray"
-                type="search"
-                placeholder="Search" />
-            </div>
-          </div>
-          <div className="menu-content-wrapper">
-          <i className="material-icons size-30">
-              mail_outline
-            </i>
-            <i className="material-icons size-30">
-              notifications_none
-            </i>
-            <div className="profile-wrapper">
-              <img src={require('../../images/profile.png')} alt="profile" className="profile-img-header" />
-              <div className="font-size">
-                <h4> Leonid Aristov</h4>
-              </div>
-              <div className="logout">
-                <i className="material-icons size-30 margin " onClick={this.handelClick} >
-                  arrow_drop_down
-                </i>
-              </div>
-            </div>
-            <div>
-              <i className="material-icons size-30">
-                menu
-              </i>
-            </div>
-          </div>
-        </div>
-        <Menu
-          id="simple-menu"
-          anchorEl={anchorEl}
-          open={Boolean(anchorEl)}
-          onClose={this.handleCloseMenu}
-        >
-          <MenuItem onClick={this.handleCloseMenu}>New Post</MenuItem>
-          <MenuItem onClick={this.handleCloseMenu}>Task</MenuItem>
-          <MenuItem onClick={this.handleCloseMenu}>Setting</MenuItem>
-          <MenuItem onClick={this.handleCloseMenu}>Help</MenuItem>
-          <MenuItem onClick={this.handleCloseMenu}>Log Out</MenuItem>
-
-        </Menu>
-      </Header2>
+        <Container>
+          { children }
+        </Container>
       </div >
     )
   }
 }
+
+export default withTheme(Header);

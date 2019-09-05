@@ -15,6 +15,17 @@
   margin: 25px 45px;
 }
 
+@media (max-width: 768px) {
+  .content-wrapper{
+    margin-top: 50px;
+    margin-left: auto;
+  }
+
+  .inner-content-wrapper {
+    margin: 20px 20px;
+  }
+}
+
 .content-navigation-wrapper{
   display: flex;
   background-color: #262D40;
