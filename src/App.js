@@ -11,6 +11,7 @@ import Listing from './components/listing';
 import Icons from './components/icons';
 import FormLayout from './components/formlayout';
 import Table from './components/table';
+import MenusView from './views/menus'; 
 import CardLayoutContainer from './components/cardlayoutcontainer';
 import ThemeSwitch from './components/themeSwitch';
 
@@ -204,6 +205,10 @@ class App extends Component {
                 render={props => (<Icons />)}
               />
 
+              <Route path="/menus"
+                render= { props => (<MenusView/>)}
+              />
+
             </Switch>
             </div>
 
@@ -217,13 +222,3 @@ class App extends Component {
 }
 
 export default App;
-
-/* {
-  this.state.form_types.map((item, id) => {
-    return (
-      <Route path="/forms/:id"
-        render={props => (id === 0 ? <FormLayout /> : null)}
-      />
-    )
-  })
-} */
