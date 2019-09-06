@@ -41,12 +41,49 @@ const mainNavigation = [
     ],
   },
   {
-    dropdown: false,
+    dropdown: true,
     title: "Icons",
     icon: {
       name: "FaSun"
     },
-    href: "/icons"
+    items: [
+      {
+        name: "Font Awesome",
+        href: "/icons/font-awesome"
+      },
+      {
+        name: "Material Design",
+        href: "/icons/material-design"
+      },
+      {
+        name: "Typicons",
+        href: "/icons/typicons"
+      },
+      {
+        name: "Ionicons",
+        href: "/icons/ionicons"
+      },
+      {
+        name: "Feather",
+        href: "/icons/feather"
+      },
+      {
+        name: "Github Octicons",
+        href: "/icons/github-octicons"
+      },
+      {
+        name: "Game",
+        href: "/icons/game"
+      },
+      {
+        name: "Weather",
+        href: "/icons/weather"
+      },
+      {
+        name: "Devicons",
+        href: "/icons/devicons"
+      },
+    ]
   },
   {
     dropdown: true,

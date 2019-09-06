@@ -8,7 +8,17 @@ import Apps from './components/apps';
 import Calender from './components/calender';
 import ButtonLayoutContainer from './components/buttonlayoutcontainer';
 import Listing from './components/listing';
-import Icons from './components/icons';
+import { 
+  FontAwesomeIcons, 
+  MaterialDesignIcons, 
+  IonIcons, 
+  TypIcons, 
+  FeatherIcons, 
+  GithubOctIcons,
+  GameIcons,
+  WeatherIcons,
+  DevIcons
+} from './views/icons';
 import FormLayout from './components/formlayout';
 import Table from './components/table';
 import MenusView from './views/menus'; 
@@ -207,8 +217,40 @@ class App extends Component {
                 render={props => (<Table />)}
               />
 
-              <Route path="/icons"
-                render={props => (<Icons />)}
+              <Route path="/icons/font-awesome"
+                render={props => (<FontAwesomeIcons />)}
+              />
+
+              <Route path="/icons/material-design"
+                render={props => (<MaterialDesignIcons />)}
+              />
+
+              <Route path="/icons/typicons"
+                render={props => (<TypIcons />)}
+              />
+
+              <Route path="/icons/ionicons"
+                render={props => (<IonIcons />)}
+              />
+
+              <Route path="/icons/feather"
+                render={props => (<FeatherIcons />)}
+              />
+
+              <Route path="/icons/github-octicons"
+                render={props => (<GithubOctIcons />)}
+              />
+
+              <Route path="/icons/game"
+                render={props => (<GameIcons />)}
+              />
+
+              <Route path="/icons/weather"
+                render={props => (<WeatherIcons />)}
+              />
+
+              <Route path="/icons/devicons"
+                render={props => (<DevIcons />)}
               />
 
               <Route path="/menus"
