@@ -11,6 +11,7 @@ import { buttonBackgroundColor, buttonTextColor, buttonLightBoxShadow, buttonDar
     color: ${buttonTextColor};
     cursor: pointer;
     font-size: 0.750em;
+    text-align: center;
     padding: 0.750em 1.875em;
     border-radius: 2px;
     min-width: 115px;

@@ -18,7 +18,7 @@ const Container = styled.div`
   ${props => !props.fluid && css`
     ${DEVICES.map(d =>
     config(props).container[d] && config(props).media[d]`
-      ${typeof config(props).container[d] === 'number' ? `width: ${config(props).container[d]}rem;` : `width: 100%;`}
+      ${typeof config(props).container[d] === 'number' ? `width: ${config(props).container[d]}px;` : `width: 100%;`}
     `)}
   `}
 
